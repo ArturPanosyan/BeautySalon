@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <title>Beauty</title>
-    <link rel="icon" type="image/png" href="../static/images/fav.png">
-
-    <link href="" rel="stylesheet" type="text/css" />
+    <title>Beauty Salon</title>
+    <link rel="icon" type="image/png" href="images/fav.png">
 
     <link rel="stylesheet" href="../static/css/apps.css">
     <link rel="stylesheet" href="../static/css/style.css">
@@ -30,7 +28,7 @@
 
                         <ul>
 
-                            <li class="Register"><a href="/registration" ><i class="flaticon-checked"   th:text="#{register}"></i> </a></li>
+                            <li class="Register"><a href="/sign" ><i class="flaticon-checked"   th:text="#{login}"></i> </a></li>
 
 
                             <div style="float: right; margin-right: 15px" >
@@ -50,7 +48,7 @@
                 <div class="col-md-12">
                     <header>
                         <div class="logo">
-                            <a href="/" title="index.html"><img src="../static/images/logo-black.png" alt=""></a>
+                            <a href="/" title="index.html"><img src="/images/logo-black.png" alt=""></a>
                         </div>
                         <nav>
                             <ul class="main-menu">
@@ -64,22 +62,22 @@
                                 </li>
                                 <li th:if="${currentUser == null}"><a href="#" title="">Become a partner</a>
                                     <ul>
-                                        <li><a href="/registerAsBeauty" title="">As a Beauty</a></li>
-                                        <li><a href="/registerAsBeauty" title="">As a Beauty</a></li>
+                                        <li><a href="/registerAsDriver" title="">As a driver</a></li>
+                                        <li><a href="/registerAsDealer" title="">As a dealer</a></li>
                                     </ul>
                                 </li>
                                 <li th:if="${currentUser != null}"><a href="#" title="">My Profile</a>
                                     <ul>
                                         <li><a th:href="@{'/user/' + ${currentUser.getUser().id}}"  title="">See Profile</a></li>
                                         <li th:if="${currentUser.getUser().getUserType().name()=='ADMIN'}"><a href="/addBarbers" title="">Add Barbers</a></li>
-                                        <li th:if="${currentUser.getUser().getUserType().name()=='USER'}"><a href="leasing-barbers-step1.html" title="">User</a></li>
+                                        <li th:if="${currentUser.getUser().getUserType().name()=='USER'}"><a href="/leasing-car-step1.html" title="">User</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </nav>
                         <div class="time-info">
                             <i class="flaticon-phone-call-1"></i>
-                            <span><i></i> (096)  091- 099</span>
+                            <span><i></i> (096) 091 - 099</span>
                         </div>
                     </header>
                 </div>
@@ -99,27 +97,27 @@
                 <li class="post-new"><a href="#" title="New post">+Post</a></li>
             </ul>
         </div>
-        <div class="logomenu-bar">
-            <div class="logo"><a href="index.html" title=""><img src="images/logo-black.png" alt=""></a></div>
-            <span class="responsviemenu-btn"><i class="flaticon-menu-1"></i></span>
+        <div class="logo-menu-bar">
+            <div class="logo"><a href="/" title=""><img src="/images/logo-black.png" alt=""></a></div>
+            <span class="../static/css/responsive/menu-btn"><i class="flaticon-menu-1"></i></span>
         </div>
         <div class="responsive-menu">
             <span class="close-btn"><i class="flaticon-error-1"></i></span>
             <ul>
                 <li><a href="index.html" title="">Home</a></li>
-                <li class="menu-item-has-children"><a href="#" title="">Barbers</a>
+                <li class="menu-item-has-children"><a href="#" title="">cars</a>
                     <ul class="sub-menu">
                         <li><a href="index-after-login.html" title="">page after login</a></li>
                         <li><a href="barbers.html" title="">cars</a></li>
-                        <li><a href="barber-profile.html" title="">barber profile</a></li>
-                        <li><a href="barber-detail.html" tification.html" title="">route notification</a></li>
-                        <li><a href="submit-barber-intro.html" title="">Submit Barber Details="">=barbers detail</a></li>
-                        <li><a href="create-beauty-notification introduction</a></li>
-                        <li><a href="submit-barber-for-yourTime.html" title="">submit barber</a></li>
-                        <li><a href="submit-route.html" title="">submit barber route</a></li>
+                        <li><a href="barber-profile.html" title="">car profile</a></li>
+                        <li><a href="barber-detail.html" title="">cars detail</a></li>
+                        <li><a href="create-beauty-notification.html" title="">route notification</a></li>
+                        <li><a href="submit-barber-intro.html" title="">Submit car introduction</a></li>
+                        <li><a href="submit-barber-for-rent.html" title="">submit car for rent</a></li>
+                        <li><a href="submit-route.html" title="">submit car route</a></li>
                     </ul>
                 </li>
-                <li class="menu-item-has-children"><a href="#" title="">Barber</a>
+                <li class="menu-item-has-children"><a href="#" title="">rides</a>
                     <ul class="sub-menu">
                         <li><a href="ride-listing.html" title="">ride listing</a></li>
                         <li><a href="ride-request.html" title="">ride request</a></li>
@@ -173,8 +171,8 @@
 
                         <div class="info-links">
                             <a href="#" title="">how does this work</a>
-                            <a href="#" title="">submit your barber</a>
-                            <span><i class="fa fa-phone"></i>call (096) 091 - 099</span>
+                            <a href="#" title="">submit your car</a>
+                            <span><i class="fa fa-phone"></i>call (012) 345 - 6789</span>
                         </div>
                     </div>
                 </div>
@@ -189,31 +187,48 @@
                     <div class="col-md-12">
                         <div class="login-sec">
                             <div class="row">
-                                <div class="col-md-4">
-                                    <div class="log-with-fb">
-                                        <h4>Login in seconds:</h4>
-                                        <a class="facebook" href="#" title=""></i>Facebook</a>
-                                        <a class="google" href="#" title=""></i>Google</a>
-                                        <a class="twitter" href="#" title=""></i>Twitter</a>
-                                    </div>
-                                </div>
-                                <div class="offset-md-1 col-md-7">
+                                <div class="offset-lg-1 col-lg-7 col-md-8">
                                     <div class="cola-form">
-                                        <h4><i class="flaticon-key"></i>Login:</h4>
-                                        <form method="post"  th:action="@{/loginProcess}">
-                                            <label style="color: red" th:text="${error?'Username not found': ''}"></label>
-                                            <label>Email</label>
-                                            <input type="text" placeholder="Your email address" name="email" required>
-                                            <label>password</label>
-                                            <input type="password" placeholder="Password" name="password" required>
-                                            <input type="checkbox">
-                                            <label for="checkbox">Remember me</label>
-                                            <button type="submit" id="checkbox" class="theme-btn">login</button>
+                                        <h4><i class="flaticon-sign-in"></i>Register:</h4>
+                                        <form method="post" action="/register" enctype="multipart/form-data">
+                                            <div th:if="${errors != null && !errors.isEmpty()}" >
+                                                <ul>
+                                                    <li style="color: red" th:each="error: ${errors}" th:text="${error}"></li>
+                                                </ul>
+                                            </div>
+
+                                            <label>Name:</label>
+                                            <input type="text" name="name" maxlength="10" required>
+                                            <label>surname:</label>
+                                            <input type="text" name="surname" required>
+                                            <label>phone number:</label>
+                                            <input type="text" name="phoneNumber" required>
+                                            <label>bank account number:</label>
+                                            <input type="text" name="bankAccountNumber" required>
+                                            <label>email:</label>
+                                            <div th:if="${existUser!=null}" >
+                                                <ul>
+                                                    <li style="color: red" th:text="${existUser.toUpperCase()}"></li>
+                                                </ul>
+                                            </div>
+                                            <input type="text" name="email" required>
+                                            <label>password:</label>
+                                            <input type="password" name="password" required>
+
+                                            <div class="dp-edit">
+                                                <span>Profile image:</span>
+                                                <input type="file" name="image"/><br>
+                                            </div>
+                                            <input type="checkbox" id="checkbox" required>
+                                            <label for="checkbox">I accept Collabors’s <a href="#" title="">Terms & Conditions</a></label>
+
+
+                                            <button type="submit" class="theme-btn">register</button>
                                         </form>
-                                        <span>Aren’t you a member yet? <a href="/registration" title="">Register here</a></span>
-                                        <span>Forgot your password? <a href="#" title="">Click here</a></span>
+                                        <span>Are you a member already? <a href="/sign" title="">Login here</a></span>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -230,8 +245,8 @@
                         <div class="servize">
                             <i class="flaticon-placeholder"></i>
                             <div class="serviz-meta">
-                                <span>ItSpace Academia Lab</span>
-                                <i>Armenia</i>
+                                <span>Tucson, AZ 80210: 501 Lane</span>
+                                <i>Canada</i>
                             </div>
                         </div>
                     </div>
@@ -266,7 +281,7 @@
             <div class="row">
                 <div class="col-lg-4 col-sm-6">
                     <div class="widget">
-                        <a href="index.html" title=""><img src="/images/logo-black.png" alt=""></a>
+                        <a href="/" title=""><img src="/images/logo-black.png" alt=""></a>
                         <p>
                             The trio took this simple idea and built it into the world’s leading carpooling platform, connecting millions of people going the same way.
                         </p>
@@ -317,7 +332,6 @@
                     <div class="col-md-12">
 
                         <span class="copyright">© 2024. All rights reserved.</span>
-                        <i><img src="/images/credit-barbers.png" alt=""></i>
                     </div>
                 </div>
             </div>
