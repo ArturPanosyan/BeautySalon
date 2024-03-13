@@ -3,8 +3,8 @@ jQuery(document).ready(function($) {
 	
 	"use strict";
 	
-// carfilter popup on car page
-$('.fiter-car').on('click', function () {
+// barberfilter popup on barber page
+$('.fiter-barber').on('click', function () {
 	$('.filter-popup').toggleClass('show');
 	return false;
 });
@@ -17,7 +17,7 @@ $('.send-msg').on('click', function () {
 	$('.popup-wraper').removeClass('active');
 });
 	
-// get notification popup car leasing page
+// get notification popup barber leasing page
 $('.get-notifn').on('click', function () {
 	$('.popup-wraper').addClass('active');
 });
@@ -169,9 +169,9 @@ jQuery('#datetimepicker1, #datetimepicker3').datetimepicker({
 		$('.parallax').scrolly({bgParallax: true});
 	}    	
 
-// owl carousel 
-if ($.isFunction($.fn.owlCarousel)) {	
-	$('.featured-caro').owlCarousel({
+// owl barberousel 
+if ($.isFunction($.fn.owlbarberousel)) {	
+	$('.featured-barbero').owlbarberousel({
 		items: 1,
 		loop: true,
 		margin: 0,
@@ -198,7 +198,7 @@ if ($.isFunction($.fn.owlCarousel)) {
 			}
 	});
 	
-	$('.detail-caro').owlCarousel({
+	$('.detail-barbero').owlbarberousel({
 		items: 1,
 		loop: true,
 		margin: 0,
@@ -223,7 +223,7 @@ if ($.isFunction($.fn.owlCarousel)) {
 		}
 	});
 	
-	$('.sponsors-list').owlCarousel({
+	$('.sponsors-list').owlbarberousel({
 		items: 4,
 		loop: true,
 		margin: 20,
@@ -248,7 +248,7 @@ if ($.isFunction($.fn.owlCarousel)) {
 		}
 	});
 	
-	$('.review-caro').owlCarousel({
+	$('.review-barbero').owlbarberousel({
 		items: 2,
 		loop: true,
 		margin: 40,

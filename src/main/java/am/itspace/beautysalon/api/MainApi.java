@@ -10,4 +10,11 @@ public class MainApi {
         return "index";
     }
 
+    @GetMapping("/services")
+    public String mainServices(){
+        return "services";
+    }
+
+
+
 }
