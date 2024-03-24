@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 	
 	"use strict";
 	
-// barberfilter popup on barber page
+// barber filter popup on barber page
 $('.fiter-barber').on('click', function () {
 	$('.filter-popup').toggleClass('show');
 	return false;
@@ -33,7 +33,7 @@ $('.update-nmbr').on('click', function () {
 	$('.popup-wraper.fone').removeClass('active');
 });	
 
-// add paymethods popup edit profile page
+// add pay methods popup edit profile page
 $('.add-paymethod').on('click', function () {
 	$('.popup-wraper').addClass('active');
 });

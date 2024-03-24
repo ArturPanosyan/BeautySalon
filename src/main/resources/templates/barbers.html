@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
-    <title>Auto Rent</title>
+    <title>Barbers</title>
     <link rel="icon" type="image/png" href="/static/images/fav.png">
 
 
@@ -171,7 +171,7 @@
 
                     <div class="login-area" th:if="${currentUser==null}">
                         <ul>
-                            <li class="log-in"><a href="/sign"><i class="flaticon-unlocked" th:text="#{login}"></i> </a>
+                            <li class="log-in"><a href="/sign"><i class="flaticon-unlocked" th:text="#{/login}"></i> </a>
                             </li>
                             <li class="Register"><a href="/registration"><i class="flaticon-checked">register</i> </a>
                             </li>
@@ -179,7 +179,7 @@
                     </div>
 
 
-                    <div class="login-area" th:if="${currentUser!=null}" }>
+                    <div class="login-area" th:if="${currentUser != null}" }>
 
                         <ul>
                             <li class="log-in">
@@ -196,7 +196,7 @@
                                     <span th:text="${currentUser.getUser().getName()}"></span>
                                     <a href="/" title="">see profile</a>
                                     <ul>
-                                        <li class="signout"><a href="/logout" title="">sign out <i
+                                        <li class="sign out"><a href="/logout" title="">sign out <i
                                                 class="fa fa-power-off"></i></a></li>
                                     </ul>
                                 </div>
@@ -224,7 +224,7 @@
                             <ul class="main-menu">
                                 <li><a href="/" title="">Home</a>
                                 </li>
-                                <li><a href="/barbers" title="">barbers</a>
+                                <li><a href="/barbers" title="">Barbers</a>
                                 </li>
                                 <li><a href="#" title="">Term and Policy</a>
                                 </li>
@@ -232,22 +232,22 @@
                                 </li>
                                 <li th:if="${currentUser == null}"><a href="#" title="">Become a partner</a>
                                     <ul>
-                                        <li><a href="/registerAsDriver" title="">As a driver</a></li>
-                                        <li><a href="/registerAsDealer" title="">As a dealer</a></li>
+                                        <li><a href="/registerAsMan" title="">As a Man</a></li>
+                                        <li><a href="/registerAsWoman" title="">As a Woman</a></li>
                                     </ul>
                                 </li>
                                 <li th:if="${currentUser != null}"><a href="#" title="">My Profile</a>
                                     <ul>
                                         <li><a th:href="@{'/user/' + ${currentUser.getUser().id}}"  title="">See Profile</a></li>
                                         <li th:if="${currentUser.getUser().getUserType().name()=='ADMIN'}"><a href="/addBarbers" title="">Add Barbers</a></li>
-                                        <li th:if="${currentUser.getUser().getUserType().name()=='USER'}"><a href="leasing-barber-step1.html" title="">User</a></li>
+                                        <li th:if="${currentUser.getUser().getUserType().name()=='USER'}"><a href="search-results.html" title="">User</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </nav>
                         <div class="time-info">
                             <i class="flaticon-phone-call-1"></i>
-                            <span><i></i> (094) 020 - 582</span>
+                            <span><i></i> (096) 091 - 099</span>
                         </div>
                     </header>
                 </div>
@@ -283,10 +283,10 @@
                                                 <h5 th:text="${barber.getMark()}"><a title="" href="#">
                                                     <span th:text="${barber.getModel()}"></span></a></h5>
                                                 <p th:text="${barber.description}"></p>
-                                                <span class="locatio"><i
+                                                <span class="location"><i
                                                         class="fa fa-location-arrow"></i>01000 New York</span>
                                                 <div class="barber-owner">
-                                                    <div class="owner-thmb">
+                                                    <div class="owner-thumb">
                                                         <img th:if="${barber.user.getPicUrl() != null && !barber.user.getPicUrl().isEmpty()}"
                                                              th:src="@{/getImage(picName=${barber.getUser().getPicUrl()})}"/>
                                                         <img th:if="${barber.user.getPicUrl() == null || barber.user.getPicUrl().isEmpty()}"

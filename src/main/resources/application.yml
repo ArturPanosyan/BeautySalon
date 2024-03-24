@@ -3,6 +3,11 @@ spring:
     url:  jdbc:mysql://localhost:3306/beauty_service
     username: root
     password: root
+  jpa:
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    change-log: classpath*:db/change-log.xml
 
 mail:
   host: smtp.gmail.com
@@ -30,3 +35,5 @@ logging:
   logback:
     rollingpolicy:
       max-file-size: 10MB
+
+

@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
-    <title>Auto Rent</title>
-    <link rel="icon" type="image/png" href="/static/images/fav.png">
+    <title>Beauty Salon</title>
+    <link rel="icon" type="image/png" href="/images/fav.png">
 
 
-
-    <link rel="stylesheet" href="/static/css/apps.css">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href="/static/css/color.css">
-    <link rel="stylesheet" href="/static/css/responsive.css">
+    <link rel="stylesheet" href="../static/css/apps.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/color.css">
+    <link rel="stylesheet" href="../static/css/responsive.css">
     <style>
         a {
             text-decoration: none;
@@ -174,9 +173,9 @@
                     </ul>
 
                     <div style="float: right; margin-right: 50px">
-                        <a href="?lang=hy" style="text-decoration: none"><img src="/imagelanguages/img/arm.png"
+                        <a href="?lang=hy" style="text-decoration: none"><img src="/imageLanguages/img/arm.png"
                                                                               width="27px" height="20px"></a>
-                        <a href="?lang=us" style="text-decoration: none"><img src="/imagelanguages/img/eng.jpg"
+                        <a href="?lang=us" style="text-decoration: none"><img src="/imageLanguages/img/eng.jpg"
                                                                               width="27px" height="20px"></a>
                     </div>
 
@@ -236,9 +235,9 @@
                             <ul class="main-menu">
                                 <li><a href="/" title="">Home</a>
                                 </li>
-                                <li><a href="/barbers" title="">cars</a>
+                                <li><a href="/barbers" title="">Barbers</a>
                                 </li>
-                                <li><a href="#" title="">Term and Policy</a>
+                                <li><a href="#" title="">Appointment</a>
                                 </li>
                                 <li><a href="#" title="">About Us</a>
                                 </li>
@@ -253,14 +252,14 @@
                                         <li><a th:href="@{'/user/' + ${currentUser.getUser().id}}" title="">See
                                             Profile</a></li>
                                         <li th:if="${currentUser.getUser().getUserType().name()=='DEALER'}"><a
-                                                href="/addCar" title="">Add Cars</a></li>
+                                                href="/addBarbers" title="">Add Barbers</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </nav>
                         <div class="time-info">
                             <i class="flaticon-phone-call-1"></i>
-                            <span><i></i> (094) 020 - 582</span>
+                            <span><i></i> (096) 091 - 099 </span>
                         </div>
                     </header>
                 </div>
@@ -279,9 +278,9 @@
                 <li class="post-new"><a href="#" title="New post">+Post</a></li>
             </ul>
         </div>
-        <div class="logo-menu-bar">
-            <div class="logo"><a href="/" title=""><img src="/images/logo-black.png" alt=""></a></div>
-            <span class="/responsive/menu-btn"><i class="flaticon-menu-1"></i></span>
+        <div class="logomenu-bar">
+            <div class="logo"><a href="/" title=""><img src="../images/logo-black.png" alt=""></a></div>
+            <span class="responsvie-menu-btn"><i class="flaticon-menu-1"></i></span>
         </div>
         <div class="responsive-menu">
             <span class="close-btn"><i class="flaticon-error-1"></i></span>
@@ -293,10 +292,10 @@
                         <li><a href="barbers.html" title="">cars</a></li>
                         <li><a href="barber-profile.html" title="">car profile</a></li>
                         <li><a href="barber-detail.html" title="">cars detail</a></li>
-                        <li><a href="create-barber-notification.html" title="">route notification</a></li>
-                        <li><a href="submit-barber-intro.html" title="">Submit car introduction</a></li>
-                        <li><a href="submit-barber-for-rent.html" title="">submit car for rent</a></li>
-                        <li><a href="submit-route.html" title="">submit car route</a></li>
+                        <li><a href="create-beautySalon-notification.html" title="">route notification</a></li>
+                        <li><a href="submit-beautySalon-intro.html" title="">Submit car introduction</a></li>
+<!--                        <li><a href="submit-car-for-rent.html" title="">submit car for rent</a></li>-->
+<!--                        <li><a href="submit-route.html" title="">submit car route</a></li>-->
                     </ul>
                 </li>
                 <li class="menu-item-has-children"><a href="#" title="">rides</a>
@@ -342,7 +341,7 @@
     </div><!-- Responsive Header -->
 
     <div class="sub-head blackish ext-low-opacity">
-        <div class="bg-image" style="background-image: url("/images/resources/subhead-bg.jpg")></div>
+        <div class="bg-image" style="background-image: url(/images/resources/subhead-bg.jpg)"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -369,7 +368,7 @@
                                                      th:src="@{/getImage(picName=${user.picUrl})}" width="30">
 
                                             <img th:if="${user.picUrl==null || user.picUrl.isEmpty()}"
-                                                 src="/images/profile.png" width="40"></figure>
+                                                 src="../images/profile.png" width="40"></figure>
                                         <div class="profile-info">
                                             <span th:text="${user.name} " class="profile-name"></span>
                                         </div>
@@ -409,13 +408,13 @@
 
     <footer class="light">
         <div class="mockup-right">
-            <img src="/images/resources/footer-mockup.png" alt="">
+            <img src="../images/resources/footer-mockup.png" alt="">
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4">
                     <div class="widget">
-                        <a href="/" title=""><img src="/images/logo-black.png" alt=""></a>
+                        <a href="/" title=""><img src="../images/logo-black.png" alt=""></a>
                         <p>
                             The trio took this simple idea and built it into the world’s leading carpooling platform,
                             connecting millions of people going the same way.
@@ -467,7 +466,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <span class="copyright">© 2019. All rights reserved.</span>
-                        <i><img src="/images/credit-cards.png" alt=""></i>
+                        <i><img src="../images/credit-cards.png" alt=""></i>
                     </div>
                 </div>
             </div>
@@ -476,8 +475,8 @@
 
 </div>
 
-<script src="/static/js/apps.min.js"></script>
-<script src="/static/js/script.js"></script>
+<script src="../static/js/apps.min.js"></script>
+<script src="../static/js/script.js"></script>
 
 </body>
 </html>

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <title>barber East</title>
-    <link rel="icon" type="image/png" href="/images/fav.png">
+    <title>Barber East</title>
+    <link rel="icon" type="image/png" href="../static/images/fav.png">
 
 
     <link rel="stylesheet" href="/static/css/apps.css">
@@ -59,9 +59,9 @@
 
                                 <div class="login-dropdown">
                                     <span th:text="${currentUser.getUser().getName()}"></span>
-                                    <a href="" title="">see profile</a>
+                                    <a href="" title="">See Profile</a>
                                     <ul>
-                                        <li class="signout"><a href="/logout" title="">sign out <i
+                                        <li class="sign out"><a href="/logout" title="">sign out <i
                                                 class="fa fa-power-off"></i></a></li>
                                     </ul>
                                 </div>
@@ -97,22 +97,22 @@
                                 </li>
                                 <li th:if="${currentUser == null}"><a href="#" title="">Become a partner</a>
                                     <ul>
-                                        <li><a href="/registerAsDriver" title="">As a driver</a></li>
-                                        <li><a href="/registerAsDealer" title="">As a dealer</a></li>
+                                        <li><a href="/registerAsMan" title="">As a Man</a></li>
+                                        <li><a href="/registerAsWoman" title="">As a Woman</a></li>
                                     </ul>
                                 </li>
                                 <li th:if="${currentUser != null}"><a href="#" title="">My Profile</a>
                                     <ul>
                                         <li><a th:href="@{'/user/' + ${currentUser.getUser().id}}"  title="">See Profile</a></li>
-                                        <li th:if="${currentUser.getUser().getUserType().name()=='DEALER'}"><a href="/addbarber" title="">Add barbers</a></li>
-                                        <li th:if="${currentUser.getUser().getUserType().name()=='USER'}"><a href="leasing-barber-step1.html" title="">User</a></li>
+                                        <li th:if="${currentUser.getUser().getUserType().name()=='ADMIN'}"><a href="/addBarbers" title="">Add barbers</a></li>
+                                        <li th:if="${currentUser.getUser().getUserType().name()=='USER'}"><a href="search-results.html" title="">User</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </nav>
                         <div class="time-info">
                             <i class="flaticon-phone-call-1"></i>
-                            <span><i></i> (094) 020 - 582</span>
+                            <span><i></i> (096) 091 - 099</span>
                         </div>
                     </header>
                 </div>

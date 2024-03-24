@@ -10,11 +10,49 @@ public class MainApi {
         return "index";
     }
 
-    @GetMapping("/services")
-    public String mainServices(){
-        return "services";
+    @GetMapping("/login")
+    public String loginApi(){
+        return "login";
     }
-
-
+//    @GetMapping("/services")
+//    public String mainServices(){
+//        return "services";
+//    }
+//
+//    @GetMapping("/registration")
+//    public String register() {
+//        return "register";
+//    }
+//
+//    @GetMapping("/search-results")
+//    public String searchResults() {
+//        return "search-results";
+//    }
+//
+//        @GetMapping("/my-profile")
+//        public String myProfile(){
+//            return "my-profile";
+//    }
+//
+//    @GetMapping("/faq")
+//    public String faqsApi(){
+//        return "faq";
+//    }
+//
+//    @GetMapping("/barbers")
+//    public String barbersApi(){
+//        return "barbers";
+//    }
+//
+//    @GetMapping("/our-team")
+//    public String teamsApi(){
+//        return "our-team";
+//    }
+//
+//    @GetMapping("/appointment")
+//    public String appointmentPage(){
+//        return "appointment";
+//    }
+//
 
 }
