@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <title>Beauty</title>
-    <link rel="icon" type="image/png" href="../static/images/fav.png">
+    <title>Beauty Salon</title>
+    <link rel="icon" type="image/png" href="../static/images/glory/favicon.ico">
 
-    <link href="" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" href="../static/css/apps.css">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/css/color.css">
-    <link rel="stylesheet" href="../static/css/responsive.css">
-
+    <link rel="stylesheet" href="/css/apps.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/color.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+../static/
 </head>
 <body>
 <div class="site-layout">
@@ -30,12 +30,12 @@
 
                         <ul>
 
-                            <li class="Register"><a href="/registration" ><i class="flaticon-checked"   th:text="#{register}"></i> </a></li>
+                            <li class="Register"><a href="/registration" ><i class="flaticon-checked"   th:text="${register}"></i> </a></li>
 
 
                             <div style="float: right; margin-right: 15px" >
-                                <a href="?lang=hy" style="text-decoration: none"><img src="../static/imageLanguages/img/arm.png" width="27px" height="20px"></a>
-                                <a  href="?lang=us" style="text-decoration: none"><img src="../static/imageLanguages/img/eng.jpg" width="27px" height="20px"></a>
+                                <a href="?lang=hy" style="text-decoration: none"><img src="/imageLanguages/img/arm.png" width="27px" height="20px"></a>
+                                <a  href="?lang=us" style="text-decoration: none"><img src="/imageLanguages/img/eng.jpg" width="27px" height="20px"></a>
                             </div>
 
                         </ul>
@@ -43,45 +43,49 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- topbar -->
-
+    </div><!-- topbar -->
     <div class="topbar">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <header>
                         <div class="logo">
-                            <a href="/" title="index.html"><img src="../static/images/logo-black.png" alt=""></a>
+                            <a href="/" title="index.html"><img src="/images/glory/logo-dark-main-103x43.png" alt=""></a>
                         </div>
                         <nav>
                             <ul class="main-menu">
                                 <li><a href="/" title="">Home</a>
                                 </li>
-                                <li><a href="/barbers" title="">Barbers</a>
+                                <li><a href="/barbers.html" title="">Barbers</a>
                                 </li>
-                                <li><a href="#" title="">Appointment</a>
+                                <li><a href="appointment.html" title="">Appointment</a>
                                 </li>
-                                <li><a href="/about" title="">About Us</a>
+                                <li><a href="/forms.html" title="">Forms</a>
+                                </li>
+                                <li><a href="/services.html" title="">Services</a>
+                                </li>
+                                <li><a href="/about" title="">About</a>
+                                </li>
+                                <li><a href="/contacts.html" title="">Contact</a>
                                 </li>
                                 <li th:if="${currentUser == null}"><a href="#" title="">Become a partner</a>
                                     <ul>
-                                        <li><a href="/registerAsBeauty" title="">As a Beauty</a></li>
-                                        <li><a href="/registerAsBeauty" title="">As a Beauty</a></li>
+                                        <li><a href="/registerAsDriver" title="">As a driver</a></li>
+                                        <li><a href="/registerAsDealer" title="">As a dealer</a></li>
                                     </ul>
                                 </li>
                                 <li th:if="${currentUser != null}"><a href="#" title="">My Profile</a>
                                     <ul>
                                         <li><a th:href="@{'/user/' + ${currentUser.getUser().id}}"  title="">See Profile</a></li>
-                                        <li th:if="${currentUser.getUser().getUserType().name()=='ADMIN'}"><a href="/addBarbers" title="">Add Barbers</a></li>
-                                        <li th:if="${currentUser.getUser().getUserType().name()=='USER'}"><a href="leasing-barbers-step1.html" title="">User</a></li>
+                                        <li th:if="${currentUser.getUser().getUserType().name()=='ADMIN'}"><a href="/addBarbers" title="">Add Cars</a></li>
+                                        <li th:if="${currentUser.getUser().getUserType().name()=='USER'}"><a href="leasing-car-step1.html" title="">User</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </nav>
                         <div class="time-info">
                             <i class="flaticon-phone-call-1"></i>
-                            <span><i></i> (096)  091- 099</span>
+                            <span><i></i> (096) 091 - 099 </span>
                         </div>
                     </header>
                 </div>
@@ -102,26 +106,26 @@
             </ul>
         </div>
         <div class="logomenu-bar">
-            <div class="logo"><a href="index.html" title=""><img src="images/logo-black.png" alt=""></a></div>
+            <div class="logo"><a href="index.html" title=""><img src="/images/glory/logo-dark-main-103x43.png" alt=""></a></div>
             <span class="responsviemenu-btn"><i class="flaticon-menu-1"></i></span>
         </div>
         <div class="responsive-menu">
             <span class="close-btn"><i class="flaticon-error-1"></i></span>
             <ul>
                 <li><a href="index.html" title="">Home</a></li>
-                <li class="menu-item-has-children"><a href="#" title="">Barbers</a>
+                <li class="menu-item-has-children"><a href="#" title="">cars</a>
                     <ul class="sub-menu">
                         <li><a href="index-after-login.html" title="">page after login</a></li>
                         <li><a href="barbers.html" title="">cars</a></li>
-                        <li><a href="barber-profile.html" title="">barber profile</a></li>
-                        <li><a href="barber-detail.html"  title="">route notification</a></li>
-                        <li><a href="submit-barber-intro.html" title="">Submit Barber Details="">=barbers detail</a></li>
-                        <li><a href="create-beauty-notification introduction</a></li>
-<!--                        <li><a href="submit-barber-for-yourTime.html" title="">submit barber</a></li>-->
-                        <li><a href="submit-route.html" title="">submit barber route</a></li>
+                        <li><a href="barber-profile.html" title="">car profile</a></li>
+                        <li><a href="barber-detail.html" title="">cars detail</a></li>
+                        <li><a href="notification.html" title="">route notification</a></li>
+                        <li><a href="submit-car-intro.html" title="">Submit car introduction</a></li>
+                        <li><a href="submit-car-for-rent.html" title="">submit car for rent</a></li>
+                        <li><a href="submit-route.html" title="">submit car route</a></li>
                     </ul>
                 </li>
-                <li class="menu-item-has-children"><a href="#" title="">Barber</a>
+                <li class="menu-item-has-children"><a href="#" title="">rides</a>
                     <ul class="sub-menu">
                         <li><a href="ride-listing.html" title="">ride listing</a></li>
                         <li><a href="ride-request.html" title="">ride request</a></li>
@@ -131,9 +135,9 @@
                 </li>
                 <li class="menu-item-has-children"><a href="#" title="">leasing</a>
                     <ul class="sub-menu">
-                        <li><a href="orderPage.html" title="">Leasing Page</a></li>
+                        <li><a href="orderPage.html" title="">Order Page</a></li>
                         <li><a href="leasing-car-step1.html" title="">leasing Step 1</a></li>
-                        <li><a href="addBarbers.html" title="">leasing step 2</a></li>
+                        <li><a href="addBarbers.html" title="">Add Barbers</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children"><a href="#" title="">profiles</a>
@@ -164,6 +168,7 @@
     </div><!-- Responsive Header -->
 
     <div class="sub-head blackish ext-low-opacity">
+        <div class="bg-image" style="background-image: url(/images/1674518306_catherineasquithgallery-com-p-fon-dlya-reklami-salona-krasoti-86.jpg)"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -174,9 +179,9 @@
                         </div>
 
                         <div class="info-links">
-                            <a href="#" title="">How does this work</a>
-                            <a href="#" title="">Submit your barber</a>
-                            <span><i class="fa fa-phone"></i>call (096) 091 - 099</span>
+                            <a href="#" title="">how does this work</a>
+                            <a href="#" title="">submit your barber</a>
+                            <span><i class="fa fa-phone"></i>call (096) 099 - 091</span>
                         </div>
                     </div>
                 </div>
@@ -194,7 +199,7 @@
                                 <div class="col-md-4">
                                     <div class="log-with-fb">
                                         <h4>Login in seconds:</h4>
-                                        <a class="facebook" href="#" title=""></i>Facebook</a>
+                                        <a class="facebook" href="#" title=""></i>facebook</a>
                                         <a class="google" href="#" title=""></i>Google</a>
                                         <a class="twitter" href="#" title=""></i>Twitter</a>
                                     </div>
@@ -203,13 +208,13 @@
                                     <div class="cola-form">
                                         <h4><i class="flaticon-key"></i>Login:</h4>
                                         <form method="post"  th:action="@{/loginProcess}">
-                                            <label style="color: red" th:text="${error?'Username not found': ''}"></label>
+                                            <label> style="color: red" th:text="${error? 'Username not found': ''}"> </label>
                                             <label>Email</label>
                                             <input type="text" placeholder="Your email address" name="email" required>
-                                            <label>Password</label>
+                                            <label>password</label>
                                             <input type="password" placeholder="Password" name="password" required>
                                             <input type="checkbox">
-                                            <label for="checkbox">Remember me</label>
+                                            <label> for="checkbox">Remember me</label>
                                             <button type="submit" id="checkbox" class="theme-btn">login</button>
                                         </form>
                                         <span>Aren’t you a member yet? <a href="/registration" title="">Register here</a></span>
@@ -232,8 +237,8 @@
                         <div class="servize">
                             <i class="flaticon-placeholder"></i>
                             <div class="serviz-meta">
-                                <span>ItSpace Academia Lab</span>
-                                <i>Armenia</i>
+                                <span>Tucson, AZ 80210: 501 Lane</span>
+                                <i>Canada</i>
                             </div>
                         </div>
                     </div>
@@ -281,14 +286,12 @@
                 </div>
                 <div class="col-lg-2 col-sm-6">
                     <div class="widget">
-                        <div class="widget-title"><h4>Useful Links</h4></div>
+                        <div class="widget-title"><h4>useful links</h4></div>
                         <ul class="list-style">
-                            <li><a href="#" title="">Haircut & Styling</a></li>
-                            <li><a href="#" title="">Makeup</a></li>
-                            <li><a href="#" title="">Manicure & Pedicure</a></li>
-                            <li><a href="#" title="">Skin Care</a></li>
-                            <li><a href="#" title="">Body Treatment</a></li>
-                            <li><a href="#" title="">Massage</a></li>
+                            <li><a href="#" title="">leasing</a></li>
+                            <li><a href="#" title="">submit route</a></li>
+                            <li><a href="#" title="">how does it work?</a></li>
+                            <li><a href="#" title="">agent listings</a></li>
                         </ul>
                     </div>
                 </div>
@@ -298,30 +301,30 @@
                         <div class="news-letter">
                             <p>We may send you information about related events, webinars, products and services which we believe.</p>
                             <form method="post">
-                                <input type="text" placeholder="Enter your email address">
-                                <button type="submit"><i class="fa fa-paper-plane-o"></i></button>
+                                <input> type="text" placeholder="Enter your email address">
+                                <button> type="submit"><i> class="fa fa-paper-plane-o"></i></button>
                             </form>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-2 col-sm-6">
                     <div class="widget">
-                        <div class="widget-title"><h4>Download Apps</h4></div>
+                        <div class="widget-title"><h4>download apps</h4></div>
                         <ul class="colla-apps">
-                            <li><a href="#" title=""><i class="flaticon-android"></i> Android</a></li>
-                            <li><a href="#" title=""><i class="flaticon-apple"></i> IPhone</a></li>
+                            <li><a href="#" title=""><i> class="flaticon-android"></i> android</a></li>
+                            <li><a href="#" title=""><i> class="flaticon-apple"></i> iPhone</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="bottom-bar">
+        <div class="bottombar">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
 
-                        <span class="copyright">© 2024. All rights reserved.</span>
-                        <i><img src="/images/credit-barbers.png" alt=""></i>
+                        <span class="copyright">© 2019. All rights reserved.</span>
+                        <i><img src="/images/credit-cards.png" alt=""></i>
                     </div>
                 </div>
             </div>
@@ -330,8 +333,8 @@
 
 </div>
 
-<script src="../static/js/apps.min.js"></script>
-<script src="../static/js/script.js"></script>
+<script src="/js/apps.min.js"></script>
+<script src="/js/script.js"></script>
 
 </body>
 </html>

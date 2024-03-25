@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <title>Auto Rent</title>
-    <link rel="icon" type="/image/png" href="/images/fav.png">
+    <title>Beauty Salon</title>
+    <link rel="icon" type="image/png" href="/images/glory/favicon.ico">
 
-    <link rel="stylesheet" href="../static/css/apps.css">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/css/color.css">
-    <link rel="stylesheet" href="../static/css/responsive.css">
+    <link rel="stylesheet" href="/css/apps.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/color.css">
+    <link rel="stylesheet" href="/css/responsive.css">
 
 </head>
 <body>
@@ -28,7 +28,9 @@
 
                         <ul>
 
-                            <li class="Register"><a href="/sign" ><i class="flaticon-checked"   th:text="#{login}"></i> </a></li>
+                            <li class="Register"><a href="/login" ><i class="flaticon-checked"   th:text="${login}"></i></a></li>
+
+
 
 
                             <div style="float: right; margin-right: 15px" >
@@ -48,18 +50,25 @@
                 <div class="col-md-12">
                     <header>
                         <div class="logo">
-                            <a href="/" title="index.html"><img src="../images/logo-black.png" alt=""></a>
+                            <a href="/" title="index.html"><img src="../images/glory/logo-black.png" alt=""></a>
                         </div>
                         <nav>
                             <ul class="main-menu">
                                 <li><a href="/" title="">Home</a>
                                 </li>
-                                <li><a href="/cars" title="">Barbers</a>
+                                <li><a href="/barbers.html" title="">Barbers</a>
                                 </li>
-                                <li><a href="#" title="">Appointment</a>
+                                <li><a href="appointment.html" title="">Appointment</a>
                                 </li>
-                                <li><a href="/about" title="">About Us</a>
+                                <li><a href="/forms.html" title="">Forms</a>
                                 </li>
+                                <li><a href="/services.html" title="">Services</a>
+                                </li>
+                                <li><a href="/about" title="">About</a>
+                                </li>
+                                <li><a href="/contacts.html" title="">Contact</a>
+                                </li>
+
                                 <li th:if="${currentUser == null}"><a href="#" title="">Become a partner</a>
                                     <ul>
                                         <li><a href="/registerAsDriver" title="">As a driver</a></li>
@@ -97,8 +106,8 @@
                 <li class="post-new"><a href="#" title="New post">+Post</a></li>
             </ul>
         </div>
-        <div class="logo-menu-bar">
-            <div class="logo"><a href="/" title=""><img src="images/logo-black.png" alt=""></a></div>
+        <div class="logomenu-bar">
+            <div class="logo"><a href="/" title=""><img src="/images/logo-black.png" alt=""></a></div>
             <span class="responsviemenu-btn"><i class="flaticon-menu-1"></i></span>
         </div>
         <div class="responsive-menu">
@@ -111,7 +120,7 @@
                         <li><a href="barbers.html" title="">cars</a></li>
                         <li><a href="barber-profile.html" title="">car profile</a></li>
                         <li><a href="barber-detail.html" title="">cars detail</a></li>
-                        <li><a href="create-route-notification.html" title="">route notification</a></li>
+                        <li><a href="notification.html" title="">route notification</a></li>
                         <li><a href="submit-car-intro.html" title="">Submit car introduction</a></li>
                         <li><a href="submit-car-for-rent.html" title="">submit car for rent</a></li>
                         <li><a href="submit-route.html" title="">submit car route</a></li>
@@ -127,9 +136,9 @@
                 </li>
                 <li class="menu-item-has-children"><a href="#" title="">leasing</a>
                     <ul class="sub-menu">
-                        <li><a href="orderPage.html" title="">Leasing Page</a></li>
+                        <li><a href="orderPage.html" title="">Order Page</a></li>
                         <li><a href="leasing-car-step1.html" title="">leasing Step 1</a></li>
-                        <li><a href="addBarbers.html" title="">leasing step 2</a></li>
+                        <li><a href="addBsrbers.html" title="">Add Barbers</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children"><a href="#" title="">profiles</a>
@@ -160,7 +169,7 @@
     </div><!-- Responsive Header -->
 
     <div class="sub-head blackish ext-low-opacity">
-        <div class="bg-image" style="background-image: url(/images/resources/subhead-bg.jpg)"></div>
+        <div class="bg-image" style="background-image: url(/images/1674518306_catherineasquithgallery-com-p-fon-dlya-reklami-salona-krasoti-86.jpg)"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -173,7 +182,7 @@
                         <div class="info-links">
                             <a href="#" title="">how does this work</a>
                             <a href="#" title="">submit your car</a>
-                            <span><i class="fa fa-phone"></i>call (096) 091 - 099 </span>
+                            <span><i class="fa fa-phone"></i>call (012) 345 - 6789</span>
                         </div>
                     </div>
                 </div>
@@ -238,6 +247,7 @@
         </div>
     </section><!-- form section -->
 
+
     <section>
         <div class="space no-space dark-bg">
             <div class="container">
@@ -282,7 +292,7 @@
             <div class="row">
                 <div class="col-lg-4 col-sm-6">
                     <div class="widget">
-                        <a href="/" title=""><img src="/images/glory/logo-black.png" alt=""></a>
+                        <a href="/" title=""><img src="/images/glory/logo-dark-main-103x43.png" alt=""></a>
                         <p>
                             The trio took this simple idea and built it into the world’s leading carpooling platform, connecting millions of people going the same way.
                         </p>
@@ -327,13 +337,13 @@
                 </div>
             </div>
         </div>
-        <div class="bottom-bar">
+        <div class="bottombar">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
 
                         <span class="copyright">© 2022. All rights reserved.</span>
-                        <i><img src="../static/images/credit-cards.png" alt=""></i>
+                        <i><img src="/images/credit-cards.png" alt=""></i>
                     </div>
                 </div>
             </div>
@@ -342,8 +352,8 @@
 
 </div>
 
-<script src="../static/js/apps.min.js"></script>
-<script src="../static/js/script.js"></script>
+<script src="/js/apps.min.js"></script>
+<script src="/js/script.js"></script>
 
 </body>
 </html>

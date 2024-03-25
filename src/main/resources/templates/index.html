@@ -6,7 +6,7 @@
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
     <title>Auto Rent</title>
-    <link rel="icon" type="image/png" href="../images/fav.png">
+    <link rel="icon" type="image/png" href="../images/glory/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="../css/apps.css">
@@ -92,11 +92,17 @@
                             <ul class="main-menu">
                                 <li><a href="/" title="">Home</a>
                                 </li>
-                                <li><a href="/cars" title="">cars</a>
+                                <li><a href="/barbers.html" title="">Barbers</a>
                                 </li>
-                                <li><a href="#" title="">Term and Policy</a>
+                                <li><a href="appointment.html" title="">Appointment</a>
                                 </li>
-                                <li><a href="/about" title="">About Us</a>
+                                <li><a href="/forms.html" title="">Forms</a>
+                                </li>
+                                <li><a href="/services.html" title="">Services</a>
+                                </li>
+                                <li><a href="/about" title="">About</a>
+                                </li>
+                                <li><a href="/contacts.html" title="">Contact</a>
                                 </li>
                                 <li th:if="${currentUser == null}"><a href="#" title="">Become a partner</a>
                                     <ul>
@@ -109,7 +115,7 @@
                                         <li><a th:href="@{'/user/' + ${currentUser.getUser().id}}" title="">See
                                             Profile</a></li>
                                         <li th:if="${currentUser.getUser().getUserType().name()=='DEALER'}"><a
-                                                href="/addCar" title="">Add Cars</a></li>
+                                                href="/addCar" title="">Add Barbers</a></li>
                                         <li th:if="${currentUser.getUser().getUserType().name()=='USER'}"><a
                                                 href="leasing-car-step1.html" title="">User</a></li>
                                     </ul>
@@ -118,7 +124,7 @@
                         </nav>
                         <div class="time-info">
                             <i class="flaticon-phone-call-1"></i>
-                            <span><i></i> (094) 020 - 582</span>
+                            <span><i></i> (096) 091 - 099 </span>
                         </div>
                     </header>
                 </div>
@@ -148,13 +154,13 @@
                 <li class="menu-item-has-children"><a href="#" title="">cars</a>
                     <ul class="sub-menu">
                         <li><a href="index-after-login.html" title="">page after login</a></li>
-                        <li><a href="cars.html" title="">cars</a></li>
-                        <li><a href="car-profile.html" title="">car profile</a></li>
-                        <li><a href="car-detail.html" title="">cars detail</a></li>
-                        <li><a href="create-route-notification.html" title="">route notification</a></li>
-                        <li><a href="submit-car-intro.html" title="">Submit car introduction</a></li>
-                        <li><a href="submit-car-for-rent.html" title="">submit car for rent</a></li>
-                        <li><a href="submit-route.html" title="">submit car route</a></li>
+                        <li><a href="barbers.html" title="">Barbers</a></li>
+                        <li><a href="barber-profile.html" title="">car profile</a></li>
+                        <li><a href="barber-detail.html" title="">cars detail</a></li>
+                        <li><a href="notification.html" title="">route notification</a></li>
+<!--                        <li><a href="submit-car-intro.html" title="">Submit car introduction</a></li>-->
+<!--                        <li><a href="submit-car-for-rent.html" title="">submit car for rent</a></li>-->
+<!--                        <li><a href="submit-route.html" title="">submit car route</a></li>-->
                     </ul>
                 </li>
                 <li class="menu-item-has-children"><a href="#" title="">rides</a>
@@ -168,8 +174,8 @@
                 <li class="menu-item-has-children"><a href="#" title="">leasing</a>
                     <ul class="sub-menu">
                         <li><a href="orderPage.html" title="">Leasing Page</a></li>
-                        <li><a href="leasing-car-step1.html" title="">leasing Step 1</a></li>
-                        <li><a href="addCar.html" title="">leasing step 2</a></li>
+<!--                        <li><a href="leasing-car-step1.html" title="">leasing Step 1</a></li>-->
+                        <li><a href="addBarbers.html" title="">Add Barbers</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children"><a href="#" title="">profiles</a>
@@ -177,10 +183,10 @@
                         <li><a href="user-profile.html" title="">Profile user</a></li>
                         <li><a href="user-profile-v2.html" title="">Profile user v2</a></li>
                         <li><a href="my-profile.html" title="">My profile</a></li>
-                        <li><a href="profile-balance.html" title="">profile balance</a></li>
-                        <li><a href="profile-earning.html" title="">profile earning</a></li>
-                        <li><a href="profile-edit.html" title="">profile edit page</a></li>
-                        <li><a href="profile-invite-friend.html" title="">profile invite friend</a></li>
+                        <li><a href="blog-post.html" title="">profile balance</a></li>
+                        <li><a href="blog-modern.html" title="">profile earning</a></li>
+                        <li><a href="blog-classic.html" title="">profile edit page</a></li>
+                        <li><a href="blog-without-sidebar.html" title="">profile invite friend</a></li>
                         <li><a href="profile-points.html" title="">profile points</a></li>
                     </ul>
                 </li>
@@ -501,7 +507,7 @@
                                      data-paddingbottom="[0,0,0,0]"
                                      data-paddingleft="[40,40,40,30]"
 
-                                     style="z-index: 27; white-space: nowrap;text-transform:left; background: #fff; color: #1e1e1e; font-size: 15px; font-family: Mukta Mahee;">
+                                     style="z-index: 27; white-space: nowrap;text-transform: left; background: #fff; color: #1e1e1e; font-size: 15px; font-family: Mukta Mahee;">
                                     RIDE NOW
                                 </div>
                             </li>
