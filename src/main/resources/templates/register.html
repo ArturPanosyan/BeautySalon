@@ -78,7 +78,7 @@
                                 <li th:if="${currentUser != null}"><a href="#" title="">My Profile</a>
                                     <ul>
                                         <li><a th:href="@{'/user/' + ${currentUser.getUser().id}}"  title="">See Profile</a></li>
-                                        <li th:if="${currentUser.getUser().getUserType().name()=='DEALER'}"><a href="/addCar" title="">Add Cars</a></li>
+                                        <li th:if="${currentUser.getUser().getUserType().name()=='DEALER'}"><a href="/addBarbers" title="">Add Cars</a></li>
                                         <li th:if="${currentUser.getUser().getUserType().name()=='USER'}"><a href="leasing-car-step1.html" title="">User</a></li>
                                     </ul>
                                 </li>
@@ -245,7 +245,8 @@
                 </div>
             </div>
         </div>
-    </section><!-- form section -->
+    </section>
+    <!-- form section -->
 
 
     <section>
@@ -282,7 +283,8 @@
                 </div>
             </div>
         </div>
-    </section><!-- footer top -->
+    </section>
+    <!-- footer top -->
 
     <footer class="light">
         <div class="mockup-right">

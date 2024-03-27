@@ -40,5 +40,12 @@ public class UserApi {
         userService.save(byToken);
         return "redirect:/";
     }
+
+    @GetMapping("/activationPage")
+    public String activationPage(){
+        return "activationPage";
+    }
+
+
 }
 

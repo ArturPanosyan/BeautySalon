@@ -33,7 +33,6 @@ public class MainApi {
         return "login";
     }
 
-
     @GetMapping("/services")
     public String mainServices() {
         return "services";
@@ -42,7 +41,6 @@ public class MainApi {
     @GetMapping("/registration")
     public String register() {
         return "register";
-
     }
 
     @PostMapping("/register")
@@ -58,7 +56,6 @@ public class MainApi {
             return "redirect:/user/register?msg=Email already in use";
         }
     }
-
 
     @GetMapping("/search-results")
     public String searchResults() {
@@ -90,5 +87,9 @@ public class MainApi {
         return "appointment";
     }
 
+    @GetMapping("/masonry-gallery")
+    public String masonryGallery(){
+        return "masonry-gallery";
+    }
 }
 

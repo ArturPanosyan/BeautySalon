@@ -6,17 +6,19 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Entity
 @Table(name = "user")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int id;
     @Column(nullable = false, unique = true)
     private String name;
     @Column(nullable = false)
@@ -30,4 +32,5 @@ public class User {
     private Role role;
     private boolean active;
     private String token;
+
 }

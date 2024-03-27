@@ -1,0 +1,22 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="0005-init-services-db" author="APanosyan">
+        <createTable tableName="services">
+            <column name="id" type="identity" >
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="description" type="varchar(255)"/>
+            <column name="price" type="decimal(10,2)"/>
+            <column name="duration_minutes" type="int"/>
+            <column name="is_active" type="boolean"/>
+            <column name="category" type="varchar(255)"/>
+            <column name="provider_id" type="int"/>
+
+
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
